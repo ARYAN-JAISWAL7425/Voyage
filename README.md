@@ -4,6 +4,11 @@ A travel marketplace where **operators** list group trips and **travelers** disc
 
 > This is a monorepo with two front-ends (the public app and the admin console) sharing one Supabase project.
 
+## Live
+
+- **Marketplace:** https://voyago-zeta-coral.vercel.app
+- **Admin console:** https://voyago-admin-five.vercel.app
+
 ---
 
 ## Repository structure
