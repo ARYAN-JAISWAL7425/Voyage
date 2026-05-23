@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+/* ----------------------------------------------------------------------------
+   Voyago design tokens — ported 1:1 from the Pencil design (pencil-new.pen)
+---------------------------------------------------------------------------- */
+@theme {
+  /* Surfaces */
+  --color-surface-page: #f4f6f8;
+  --color-surface-card: #ffffff;
+  --color-surface-muted: #f8fafc;
+  --color-surface-inverse: #0c2027;
+
+  /* Ink / text */
+  --color-ink: #0f1e2e;
+  --color-ink-secondary: #56697b;
+  --color-ink-muted: #9aa8b5;
+  --color-ink-inverse: #ffffff;
+
+  /* Borders */
+  --color-line: #e5eaef;
+  --color-line-strong: #d2dae2;
+
+  /* Brand */
+  --color-brand: #0e8c84;
+  --color-brand-dark: #0b6f69;
+  --color-brand-soft: #e4f3f1;
+
+  /* Accent */
+  --color-accent: #f2994a;
+  --color-accent-soft: #fdefd9;
+
+  /* Status */
+  --color-success: #15a86b;
+  --color-success-soft: #e2f5ec;
+  --color-danger: #e5484d;
+  --color-danger-soft: #fce8e8;
+  --color-info: #3b82f6;
+  --color-star: #f5a623;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* Fonts */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-surface-page);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-heading);
+  }
+
+  /* Hide number input spinners for a cleaner look */
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+/* Thin, on-brand scrollbars */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-line-strong) transparent;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
